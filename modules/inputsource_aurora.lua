@@ -1,7 +1,7 @@
 local boxes = {}
 -- 자신이 사용하고 있는 English 인풋 소스 이름을 넣어준다
 local inputEnglish = "com.apple.keylayout.ABC"
-local box_height = 23
+local box_height = 44.0
 local box_alpha = 0.35
 local GREEN = hs.drawing.color.osx_green
 
@@ -23,9 +23,9 @@ function enable_show()
         table.insert(boxes, box)
 
         -- 이 부분의 주석을 풀면 화면 아래쪽에도 보여준다
-        -- local box2 = newBox()
-        -- draw_rectangle(box2, frame.x, frame.y + frame.h - 10, frame.w, box_height, GREEN)
-        -- table.insert(boxes, box2)
+        local box2 = newBox()
+        draw_rectangle(box2, frame.x, frame.y + frame.h - 10, frame.w, box_height, GREEN)
+        table.insert(boxes, box2)
     end)
 end
 
